@@ -1,0 +1,40 @@
+// Liste der Sprüche
+const sprueche = [
+    "Glaub an dich selbst und du wirst erstaunt sein, was du erreichen kannst!",
+    "Jeder Tag ist eine neue Chance, deine Träume zu verwirklichen.",
+    "Erfolg ist das Ergebnis von harter Arbeit und Ausdauer.",
+    "Du bist stärker, als du denkst.",
+    "Nutze den heutigen Tag, um deinem Ziel näher zu kommen.",
+    "Lernen ist der Schlüssel zum Erfolg.",
+    "Bleib fokussiert und gib niemals auf.",
+    "Jeder Schritt zählt – auch die kleinen.",
+    "Glaube an deinen Fortschritt, nicht an Perfektion.",
+    "Der Weg zum Erfolg beginnt mit dem ersten Schritt."
+];
+
+// Funktion, um einen zufälligen Spruch anzuzeigen
+function neuerSpruch() {
+    const randomIndex = Math.floor(Math.random() * sprueche.length);
+    document.getElementById('spruch').innerText = sprueche[randomIndex];
+}
+
+// Funktion für den Countdown
+function countdown() {
+    const klausurDatum = new Date('2025-02-14T00:00:00'); // Datum der Klausur
+    const heute = new Date();
+    const diff = klausurDatum - heute;
+
+    if (diff <= 0) {
+        document.getElementById('countdown').innerText = 'Die Klausur beginnt jetzt!';
+    } else {
+        const tage = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById('countdown').innerText = `Noch ${tage} Tage bis zur Klausur.`;
+    }
+}
+
+// Initiale Anzeige eines Spruchs und des Countdowns
+neuerSpruch();
+countdown();
+
+// Countdown alle 24 Stunden aktualisieren
+setInterval(countdown, 86400000);
