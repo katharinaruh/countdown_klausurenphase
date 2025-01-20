@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+⭐️ Hallo Schnaschis ⭐️
+ich wünsche euch ganz viel Erfolg beim Lernen 📚
+„Freunde an der Seite 😊, Klausuren im Blick 👀 – gemeinsam schaffen wir jeden Schritt 🙌.“
+⭐️ Kathi⭐️
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
